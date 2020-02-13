@@ -1,0 +1,47 @@
+{
+    "name": "ivanamat/cakeapp",
+    "description": "CakePHP skeleton app with ACL, Groups, Roles and Users system",
+    "url" : "http://git.ivanamat.es/cakephp/app",
+    "homepage": "http://git.ivanamat.es/cakephp/app",
+    "type": "project",
+    "license": "MIT",
+    "require": {
+        "php": ">=5.5.9",
+        "cakephp/cakephp": "~3.2",
+        "mobiledetect/mobiledetectlib": "2.*",
+        "cakephp/migrations": "~1.0",
+        "cakephp/plugin-installer": "~1.0",
+        "cakephp/acl": "~0.2",
+	"ivanamat/cakephp3-aclmanager": "1.*",
+	"ivanamat/cakephp3-markdown": "~1.0",
+	"ivanamat/cakephp3-documents": "~1.0",
+        "maiconpinto/cakephp-adminlte-theme": "^1.1"
+    },
+    "require-dev": {
+        "psy/psysh": "@stable",
+        "cakephp/debug_kit": "~3.2",
+        "cakephp/bake": "~1.1"
+    },
+    "suggest": {
+        "phpunit/phpunit": "Allows automated tests to be run without system-wide install.",
+        "cakephp/cakephp-codesniffer": "Allows to check the code against the coding standards used in CakePHP."
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "App\\Test\\": "tests",
+            "Cake\\Test\\": "./vendor/cakephp/cakephp/tests"
+        }
+    },
+    "scripts": {
+        "post-install-cmd": "App\\Console\\Installer::postInstall",
+        "post-create-project-cmd": "App\\Console\\Installer::postInstall",
+        "post-autoload-dump": "Cake\\Composer\\Installer\\PluginInstaller::postAutoloadDump"
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}

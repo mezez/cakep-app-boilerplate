@@ -1,0 +1,7 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{HTTP_USER_AGENT} ^.*(360Spider|AhrefsBot|Baiduspider|BOT\ for\ JCE|Download\ Accelerator|Exabot|Heritrix|HTTrack|Mail.Ru|MJ12bot|Scrapy|SemrushBot|SEOprofiler|SiteExplorer|Slackbot-Link-Expanding|SurveyBot|Yandex).*$ [NC]
+    RewriteRule .* - [R=403,L]
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^ index.php [L]
+</IfModule>

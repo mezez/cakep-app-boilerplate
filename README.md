@@ -1,0 +1,1 @@
+Boilerplate Cakephp 3 application with Ivanamat ACL configured, AdminLTE Theme setup and superamin account setup with db in config folder
